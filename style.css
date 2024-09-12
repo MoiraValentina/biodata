@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100vw;
+  background: url("./bg.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.biodata {
+  display: flex;
+  margin: auto;
+  width: 80vw;
+  margin-top: 10vh;
+}
+
+/* ====== LEFT ======= */
+
+.left {
+  width: 30vw;
+  position: sticky;
+  top: 0rem;
+  border-radius: 22px 0px 0px 0px;
+}
+
+.info {
+  background: rgba(2, 5, 15, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  height: max-content;
+  border-radius: 0px 0px 0px 12px;
+}
+
+.about {
+  color: #0aceb1;
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+.left .info {
+  padding: 10%;
+  padding-bottom: 15%;
+}
+
+.info p {
+  color: #eafcf9;
+  font-size: 1rem;
+  margin-top: 5%;
+  line-height: 1.5rem;
+}
+
+img {
+  display: block;
+  width: 100%;
+  border-radius: 22px 0px 0px 0px;
+  opacity: 90%;
+}
+
+/* ====== RIGHT ======= */
+
+.right {
+  background: rgba(2, 5, 15, 0.95);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 0px 22px 0px 0px;
+  width: 100%;
+  border: 1px solid #055769;
+}
+
+.name {
+  padding: 2.5rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: #0aceb1;
+  padding: 12px 34px;
+  background-color: #060c22;
+  border: 1px solid #055769;
+  border-radius: 0px 12px 12px 0px;
+  width: 50%;
+  font-weight: 400;
+}
+
+.information {
+  display: flex;
+}
+.information2 {
+  display: flex;
+}
+
+.label {
+  margin: 32px 62px;
+  color: #eafcf9;
+}
+
+.label p {
+  padding: 16.5px 0px;
+  font-size: 16px;
+}
+
+.answer {
+  margin: 32px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.answer input {
+  margin: 15px 0px;
+  margin-top: 0px;
+  padding: 10px 24px;
+  font-size: 16px;
+  width: 100%;
+  border-radius: 4px;
+  background: none;
+  color: #fff;
+  cursor: pointer;
+  border-bottom: 1px solid #060c22;
+}
+
+.answer input:hover::placeholder {
+  color: #0aceb1;
+}
+
+.hover-show {
+  width: 13rem;
+  height: auto;
+  position: absolute;
+  right: 8%;
+  top: 20%;
+  transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+  visibility: hidden;
+}
+
+.answer .item:hover .hover-show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.answer input::placeholder {
+  color: #b8cdca;
+}
+
+.right .description {
+  margin-left: 2rem;
+}
+
+.information2 .answer input {
+  width: 150%;
+}
+
+.information2 .label {
+  margin: 24px 62px;
+}
+
+.information2 .label p {
+  padding: 16px 0px;
+}
+
+/* ====== RESPONSIVENESS ======= */
+
+@media screen and (max-width: 1030px) {
+  .hover-show {
+    width: 10rem;
+    right: 0%;
+    top: 12%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .title {
+    width: 80%;
+  }
+
+  .label {
+    margin: 32px 42px;
+    color: #eafcf9;
+  }
+
+  .hover-show {
+    width: 8rem;
+    right: -10%;
+    top: 12%;
+  }
+
+  .information2 .answer input {
+    width: 100%;
+  }
+
+  .information2 .label {
+    margin: 24px 34px;
+  }
+}
+
+/* ====== MOBILE ======= */
+
+@media screen and (max-width: 450px) {
+  .biodata {
+    flex-direction: column;
+    width: 100vw;
+  }
+
+  .left {
+    width: 100vw;
+  }
+
+  img {
+    border-radius: 22px 22px 0px 0px;
+  }
+
+  .answer input::placeholder {
+    content: "First line of text \A Second line of text";
+    white-space: pre-line;
+  }
+
+  .right {
+    border-radius: 0px;
+  }
+
+  .label {
+    margin: 32px;
+  }
+
+  .information2 .answer input {
+    height: 60px;
+  }
+
+  .information2 .label {
+    margin: 32px 32px;
+  }
+  .information2 .label p {
+    padding: 28px 0px;
+  }
+
+  .hover-show {
+    right: 0%;
+    top: 12%;
+  }
+}
