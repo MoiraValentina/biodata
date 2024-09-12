@@ -61,6 +61,7 @@ body {
 
 .left .info {
   padding: 10%;
+  padding-bottom: 15%;
 }
 
 .info p {
@@ -119,7 +120,7 @@ img {
 }
 
 .label p {
-  padding: 1rem 0rem;
+  padding: 16.5px 0px;
   font-size: 16px;
 }
 
@@ -130,18 +131,35 @@ img {
 }
 
 .answer input {
-  margin: 0.72rem 0rem;
-  padding: 6px 10px;
+  margin: 15px 0px;
+  margin-top: 0px;
+  padding: 10px 24px;
   font-size: 16px;
-  width: 200%;
+  width: 100%;
   border-radius: 4px;
   background: none;
   color: #fff;
   cursor: pointer;
+  border-bottom: 1px solid #060c22;
 }
 
 .answer input:hover::placeholder {
   color: #0aceb1;
+}
+
+.hover-show {
+  width: 13rem;
+  height: auto;
+  position: absolute;
+  right: 8%;
+  top: 20%;
+  transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+  visibility: hidden;
+}
+
+.answer .item:hover .hover-show {
+  visibility: visible;
+  opacity: 1;
 }
 
 .answer input::placeholder {
@@ -152,11 +170,29 @@ img {
   margin-left: 2rem;
 }
 
-@media screen and (max-width: 800px) {
-  .answer input {
-    width: 100%;
-  }
+.information2 .answer input {
+  width: 150%;
+}
 
+.information2 .label {
+  margin: 24px 62px;
+}
+
+.information2 .label p {
+  padding: 16px 0px;
+}
+
+/* ====== RESPONSIVENESS ======= */
+
+@media screen and (max-width: 1030px) {
+  .hover-show {
+    width: 10rem;
+    right: 0%;
+    top: 12%;
+  }
+}
+
+@media screen and (max-width: 800px) {
   .title {
     width: 80%;
   }
@@ -164,6 +200,20 @@ img {
   .label {
     margin: 32px 42px;
     color: #eafcf9;
+  }
+
+  .hover-show {
+    width: 8rem;
+    right: -10%;
+    top: 12%;
+  }
+
+  .information2 .answer input {
+    width: 100%;
+  }
+
+  .information2 .label {
+    margin: 24px 34px;
   }
 }
 
@@ -201,9 +251,14 @@ img {
   }
 
   .information2 .label {
-    margin: 48px 32px;
+    margin: 32px 32px;
   }
   .information2 .label p {
     padding: 28px 0px;
+  }
+
+  .hover-show {
+    right: 0%;
+    top: 12%;
   }
 }
