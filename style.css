@@ -59,9 +59,18 @@ body {
   width: 100%;
 }
 
+.submit-btn {
+  width: 100%;
+  margin: 20px 0px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  background: rgba(2, 5, 15, 0.9);
+  color: #ffffff;
+}
+
 .left .info {
   padding: 10%;
-  padding-bottom: 15%;
 }
 
 .info p {
@@ -110,6 +119,7 @@ img {
 .information {
   display: flex;
 }
+
 .information2 {
   display: flex;
 }
